@@ -26,8 +26,8 @@ start_targets.bat	一键启动 Vulhub 测试靶机（Tomcat/Redis）	演示态�
 
 环境前置要求
 
-Python 3.10+（安装时勾选 Add to PATH）
+Python 3.10+
 
-nmap（态势感知需要，CTF 不需要）
+nmap
 
 Docker Desktop（仅启动测试靶机时需要）
