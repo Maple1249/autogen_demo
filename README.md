@@ -10,18 +10,15 @@ start.bat	一键启动网页版：激活环境 → 启动 web_server.py	每次�
 
 start_targets.bat	一键启动 Vulhub 测试靶机（Tomcat/Redis）	演示态势感知前双击
 
-首次部署（三步）
+首次部署
 
-1.
-双击 deploy.bat，等它自动装好环境和依赖。
+1.双击 deploy.bat，等它自动装好环境和依赖。
 
-2.
-打开生成的 .env 文件，把 DEEPSEEK_API_KEY= 后面填上你的 DeepSeek 密钥，保存。
+2.打开生成的 .env 文件，把 DEEPSEEK_API_KEY= 后面填上你的 DeepSeek 密钥，保存。
 
-3.
-双击 start.bat，浏览器打开 http://127.0.0.1:8000 即可使用。
+3.双击 start.bat，浏览器打开 http://127.0.0.1:8000 即可使用。
 
-演示态势感知（可选）
+演示态势感知
 
 先双击 start_targets.bat 起靶机（第一次用需按脚本顶部提示，把 TOMCAT_DIR/REDIS_DIR 改成你本机 Vulhub 的实际路径）。
 
