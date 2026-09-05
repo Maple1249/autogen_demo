@@ -1,0 +1,23 @@
+# 环境与密钥
+.env
+
+# 虚拟环境
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 运行时生成
+.gradio/
+audit_logs/
+web_uploads/
+latest_report.json
+report.html
+
+# 备份文件
+*.bak
+
+# 测试样本(按需保留)
+challenge*.bin
+stego.png

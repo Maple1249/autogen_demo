@@ -1,0 +1,8 @@
+autogen-agentchat
+autogen-ext[openai]
+python-dotenv
+pydantic
+python-magic-bin
+fastapi
+uvicorn
+python-multipart

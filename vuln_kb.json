@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "name": "Apache Tomcat",
+      "keywords": ["tomcat", "coyote", "catalina"],
+      "risk_level": "high",
+      "notes": "Java Servlet 容器。历史上存在多个高危漏洞(如任意文件上传、反序列化、AJP协议漏洞)。若开启了 PUT 方法或 AJP 端口,风险显著上升。",
+      "focus_next": "确认具体版本号;检查是否开放 AJP(8009)端口;确认 HTTP 方法是否允许 PUT。"
+    },
+    {
+      "name": "Java Servlet 容器(泛指)",
+      "keywords": ["chunked", "servlet", "jsp"],
+      "risk_level": "medium",
+      "notes": "响应特征提示为 Java Web 容器,但具体产品未知。版本盲区导致无法评估 CVE 暴露面。",
+      "focus_next": "做更精确的指纹识别以确定具体容器(Tomcat/Jetty/Resin等)和版本。"
+    },
+    {
+      "name": "Nginx",
+      "keywords": ["nginx"],
+      "risk_level": "medium",
+      "notes": "常见反向代理/Web服务器。风险多来自配置不当(如路径穿越、别名解析)。",
+      "focus_next": "确认版本;检查是否作为反代隐藏了后端服务。"
+    },
+    {
+      "name": "Redis",
+      "keywords": ["redis"],
+      "risk_level": "high",
+      "notes": "内存数据库。未授权访问是经典高危问题,可能导致数据泄露或被写入恶意数据。",
+      "focus_next": "确认是否需要认证;确认是否绑定在对外接口。"
+    },
+    {
+      "name": "Weblogic",
+      "keywords": ["weblogic", "oracle"],
+      "risk_level": "critical",
+      "notes": "Oracle 中间件。历史上有多个严重反序列化远程代码执行漏洞。",
+      "focus_next": "确认版本;检查 T3、控制台等入口是否暴露。"
+    },
+    {
+      "name": "SSH",
+      "keywords": ["ssh", "openssh"],
+      "risk_level": "low",
+      "notes": "远程管理服务。风险主要来自弱口令和旧版本已知漏洞。",
+      "focus_next": "确认版本;确认是否允许密码登录。"
+    }
+  ]
+}
